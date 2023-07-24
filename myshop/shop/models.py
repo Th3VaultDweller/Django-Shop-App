@@ -24,10 +24,10 @@ class Product(models.Model):
     slug = models.SlugField(max_length=255)
     image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
     description = models.TextField(blank=True)
-    price = models.DecimalField(max_digits=10, decimal_places=2)
-    available = models.BooleanField(blank=True) # Булево значение
-    created = models.DateTimeField(auto_now_add=True)
-    updated = models.DateTimeField(auto_now=True)
+    price = models.DecimalField(max_digits=10, decimal_places=2) # для хранения значений денежных сумм всегда следует использовать DecimalField. Используя Decimal удастся избежать проблем с плавающей запятой
+    available = models.BooleanField(blank=True) # Булево значение (да или нет)
+    created = models.DateTimeField(auto_now_add=True) # auto_now_add добавляет дату и время только на момент создания продукта
+    updated = models.DateTimeField(auto_now=True) # auto_now добавляет дату и время каждый раз, когда продукт обновляется
 
     class Meta:
         ordering = ['name']
