@@ -26,8 +26,8 @@ class Product(models.Model):
     description = models.TextField(blank=True)
     price = models.DecimalField(max_digits=10, decimal_places=2) # для хранения значений денежных сумм всегда следует использовать DecimalField. Используя Decimal удастся избежать проблем с плавающей запятой
     available = models.BooleanField(blank=True) # Булево значение (да или нет)
-    created = models.DateTimeField(auto_now_add=True) # auto_now_add добавляет дату и время только на момент создания продукта
-    updated = models.DateTimeField(auto_now=True) # auto_now добавляет дату и время каждый раз, когда продукт обновляется
+    created = models.DateTimeField(auto_now_add=True) # auto_now_add добавляет дату и время только на момент создания товара
+    updated = models.DateTimeField(auto_now=True) # auto_now добавляет дату и время каждый раз, когда товар обновляется
 
     class Meta:
         ordering = ['name']
