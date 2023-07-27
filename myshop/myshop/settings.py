@@ -27,12 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+CART_SESSION_ID = 'cart'
 
 # Application definition
 
 INSTALLED_APPS = [
     # Мои приложения
     'shop.apps.ShopConfig',
+    'shop.apps.CartConfig',
 
     # Приложения по умолчанию
     'django.contrib.admin',
@@ -128,3 +130,4 @@ MEDIA_ROOT = BASE_DIR / 'media' # MEDIA_ROOT – это локальный пу�
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
