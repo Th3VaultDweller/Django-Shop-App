@@ -12,27 +12,26 @@ class Cart:
             cart = self.session[settings.CART_SESSION_ID] = {}
         self.cart = cart
 
-        def add(self, quantity=1, override_quantity=False):
-            """Добавить товар в корзину, либо обновить его количество"""
-            product_id = str(product.id)
-            if product_id not in self.cart:
-                self.cart[product_id] = {'quantity': 0,
-                                         'price': str(product.price)
-                                         }
-            if override_quantity:
-                self.cart[product_id]['quantity'] = quantity
-            else:
-                self.cart[product_id]['quantity'] += quantity
-            self.save()
-        
-        def remove(self, product):
-            """Удалить товар из корзины"""
-            product_id = str(product.id)
-            if product_id in self.cart:
-                del self.cart(product.id)
-                self.save()
+    def add(self, quantity=1, override_quantity=False):
+        """Добавить товар в корзину, либо обновить его количество"""
+        product_id = str(product.id)
+        if product_id not in self.cart:
+            self.cart[product_id] = {'quantity': 0,
+                                        'price': str(product.price)
+                                        }
+        if override_quantity:
+            self.cart[product_id]['quantity'] = quantity
+        else:
+            self.cart[product_id]['quantity'] += quantity
+        self.save()
+    
+    def remove(self, product):
+        """Удалить товар из корзины"""
+        product_id = str(product.id)
+        if product_id in self.cart:
+            del self.cart(product.id)
+            self.save
 
-
-        def save(self):
-            """Пометить сеанс как изменённый, чтобы обеспечить его сохранение"""
-            self.session.modified = True
+    def save(self):
+        """Пометить сеанс как изменённый, чтобы обеспечить его сохранение"""
+        self.session.modified = True
