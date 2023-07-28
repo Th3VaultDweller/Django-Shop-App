@@ -35,7 +35,7 @@ class Cart:
     
     def __iter__(self):
         # функция __iter__ создаёт итератор из последовательности
-        """Прокрутить товарные позиции в цикле и получить товары из базы данных """
+        """Прокрутка товарных позиций и получение товаров из базы данных """
         product_ids = self.cart.keys() 
         # получить объекты product и добавить их в корзину
         products = Product.objects.filtered(id__in=product_ids)
@@ -46,7 +46,17 @@ class Cart:
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
             yield item
+        
 
+    def __len__(self):
+        """Подсчёт всех товарных попозиций в корзине"""
+        return sum(item['quantity']
+                   for item in self.cart.values())
+    
+    def get_total_price(self):
+        """Подсёт общей стоимости товаров в корзине"""
+        return sum(Decimal(item['price']) *item['quantity']
+                   for item in self.cart.values())
 
     def save(self):
         """Пометить сеанс как изменённый, чтобы обеспечить его сохранение"""
