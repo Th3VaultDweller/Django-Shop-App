@@ -19,7 +19,8 @@ class Cart:
             self.cart[product_id] = {'quantity': 0,
                                         'price': str(product.price)
                                         }
-        if override_quantity:
+        if override_quantity: 
+            # булево значение, указывающее, нужно ли заменить количество переданным количеством (True) либо прибавить новое количество к существующему количеству (False).
             self.cart[product_id]['quantity'] = quantity
         else:
             self.cart[product_id]['quantity'] += quantity
@@ -31,7 +32,24 @@ class Cart:
         if product_id in self.cart:
             del self.cart(product.id)
             self.save
+    
+    def __iter__(self):
+        # функция __iter__ создаёт итератор из последовательности
+        """Прокрутить товарные позиции в цикле и получить товары из базы данных """
+        product_ids = self.cart.keys() 
+        # получить объекты product и добавить их в корзину
+        products = Product.objects.filtered(id__in=product_ids)
+        cart = self.cart.copy()
+        for product in products:
+            cart[str(product.id)]['product'] = product
+        for item in cart.values():
+            item['price'] = Decimal(item['price'])
+            item['total_price'] = item['price'] * item['quantity']
+            yield item
+
 
     def save(self):
         """Пометить сеанс как изменённый, чтобы обеспечить его сохранение"""
         self.session.modified = True
+
+    
