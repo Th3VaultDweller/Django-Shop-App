@@ -61,5 +61,10 @@ class Cart:
     def save(self):
         """Пометить сеанс как изменённый, чтобы обеспечить его сохранение"""
         self.session.modified = True
+    
+    def clear(self):
+        """Удаление корзины из сеанса"""
+        del self.session[settings.CART_SESSION_ID]
+        self.save()
 
     
