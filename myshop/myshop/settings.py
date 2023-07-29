@@ -34,7 +34,7 @@ CART_SESSION_ID = 'cart'
 INSTALLED_APPS = [
     # Мои приложения
     'shop.apps.ShopConfig',
-    'shop.apps.CartConfig',
+    'cart.apps.CartConfig',
 
     # Приложения по умолчанию
     'django.contrib.admin',

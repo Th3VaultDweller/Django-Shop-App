@@ -30,8 +30,8 @@ class Cart:
         """Удалить товар из корзины"""
         product_id = str(product.id)
         if product_id in self.cart:
-            del self.cart(product.id)
-            self.save
+            del self.cart[product.id]            
+            self.save()
     
     def __iter__(self):
         # функция __iter__ создаёт итератор из последовательности
