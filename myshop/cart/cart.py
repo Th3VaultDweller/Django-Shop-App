@@ -35,13 +35,18 @@ class Cart:
     
     def __iter__(self):
         # функция __iter__ создаёт итератор из последовательности
+        # метод __iter__() позволит легко прокручивать товарные позиции корзины в представлениях и шаблонах.
         """Прокрутка товарных позиций и получение товаров из базы данных """
         product_ids = self.cart.keys() 
         # получить объекты product и добавить их в корзину
         products = Product.objects.filtered(id__in=product_ids)
         cart = self.cart.copy()
+        
+        # текущая корзина копируется в  переменную cart, и в нее добавляются экземпляры класса Product.
         for product in products:
             cart[str(product.id)]['product'] = product
+        
+        # товары корзины прокручиваются в цикле, конвертируя цену каждого товара обратно в десятичное число фиксированной точности и добавляя в каждый товар атрибут total_price
         for item in cart.values():
             item['price'] = Decimal(item['price'])
             item['total_price'] = item['price'] * item['quantity']
