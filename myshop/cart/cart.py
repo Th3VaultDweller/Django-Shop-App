@@ -39,7 +39,7 @@ class Cart:
         """Прокрутка товарных позиций и получение товаров из базы данных """
         product_ids = self.cart.keys() 
         # получить объекты product и добавить их в корзину
-        products = Product.objects.filtered(id__in=product_ids)
+        products = Product.objects.filter(id__in=product_ids)
         cart = self.cart.copy()
         
         # текущая корзина копируется в  переменную cart, и в нее добавляются экземпляры класса Product.
