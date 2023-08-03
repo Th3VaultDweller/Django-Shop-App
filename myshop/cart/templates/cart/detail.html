@@ -21,19 +21,27 @@
     <tbody>
       {% for item in cart %}
         {% with product=item.product %}
-          <tr>
             <td>
+              <!-- Product Image -->
               <a href="{{ product.get_absolute_url }}">
                 <img src="{% if product.image %}{{ product.image.url }}
                 {% else %}{% static "img/no_image.png" %}{% endif %}">
               </a>
             </td>
+            <!-- Product and Change Quantity -->
             <td>{{ product.name }}</td>
-            <td>{{ item.quantity }} </td>
+            <td>{{ item.quantity }}
               <form action="{% url "cart:cart_add" product.id %}" method="post">
                 {{ item.update_quantity_form.quantity }}
                 {{ item.update_quantity_form.overrdide }}
                 <input type="submit" value="Updade">
+                {% csrf_token %}
+              </form>
+            </td>
+            <!-- Remove Product -->
+            <td>
+              <form action="{% url "cart:cart_remove" product.id %}" method="post">
+                <input type="submit" value="Remove">
                 {% csrf_token %}
               </form>
             </td>
@@ -42,6 +50,7 @@
           </tr>
         {% endwith %}
       {% endfor %}
+      <!-- Total Price -->
       <tr class="total">
         <td>Total</td>
         <td colspan="4"></td>
@@ -49,6 +58,7 @@
       </tr>
     </tbody>
   </table>
+  <!-- Checkout and Continue Shopping -->
   <p class="text-right">
     <a href="{% url "shop:product_list" %}" class="button
     light">Continue shopping</a>
