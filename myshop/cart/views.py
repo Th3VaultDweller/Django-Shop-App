@@ -30,6 +30,7 @@ def cart_remove(request, product_id):
 def cart_detail(request):
     """Представление корзины и её товаров"""
     cart = Cart(request)
+    # По каждому товару в корзине создается экземпляр CartAddProductForm, чтобы разрешить изменение количества товара. Форма инициализируется текущим количеством товара, и поле override получает значение True, чтобы при передаче формы на обработку в представление cart_add текущее количество заменялось новым
     for item in cart:
         item['update_quantity_form'] = CartAddProductForm(initial={
             'quantity': item['quantity'],
