@@ -22,6 +22,7 @@
       {% for item in cart %}
         {% with product=item.product %}
             <!-- Product Image -->
+          <tr>
             <td>
               <a href="{{ product.get_absolute_url }}">
                 <img src="{% if product.image %}{{ product.image.url }}
@@ -31,7 +32,7 @@
             
             <!-- Product and Change Quantity -->
             <td>{{ product.name }}</td>
-            <td>{{ item.quantity }}
+            <td>
               <form action="{% url "cart:cart_add" product.id %}" method="post">
                 {{ item.update_quantity_form.quantity }}
                 {{ item.update_quantity_form.overrdide }}
