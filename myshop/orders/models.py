@@ -25,3 +25,22 @@ class Order(models.Model):
     def get_total_cost(self):
         """Получение общей стоимости товаров в заказе"""
         return sum(item.get_cost()) for item in self.items.all()
+
+class OrderItems(models.Model):
+    """Сохранение товара, количества и цены, уплаченной за каждый товар"""
+    order = models.ForeignKey(Order,
+                              related_name='items',
+                              on_delete=models.CASCADE) # каскадное удаление
+    product = models.ForeignKey(Product,
+                                related_name='order_items',
+                                on_delete=models.CASCADE)
+    price = models.DecimalField(max_digits=10,
+                                decimal_places=2)
+    quantity = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return str(self.id)
+    
+    def get_cost(self):
+        "Общая стоимость заказа"
+        return self.price * self.quantity # цена за товар, помноженная на его количество
