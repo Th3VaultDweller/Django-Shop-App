@@ -24,7 +24,7 @@ class Order(models.Model):
     
     def get_total_cost(self):
         """Получение общей стоимости товаров в заказе"""
-        return sum(item.get_cost()) for item in self.items.all()
+        return sum(item.get_cost() for item in self.items.all())
 
 class OrderItems(models.Model):
     """Сохранение товара, количества и цены, уплаченной за каждый товар"""
