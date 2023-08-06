@@ -42,5 +42,5 @@ class OrderItems(models.Model):
         return str(self.id)
     
     def get_cost(self):
-        "Общая стоимость заказа"
+        "Стоимость товара"
         return self.price * self.quantity # цена за товар, помноженная на его количество
