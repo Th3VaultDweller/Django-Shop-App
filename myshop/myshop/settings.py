@@ -35,6 +35,7 @@ INSTALLED_APPS = [
     # Мои приложения
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
+    'orders.apps.OrdersConfig',
 
     # Приложения по умолчанию
     'django.contrib.admin',
