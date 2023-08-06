@@ -7,10 +7,10 @@ class Order(models.Model):
     """Репрезентация заказа с информацией о клиенте"""
     first_name = models.CharField(max_length=100)
     last_name = models.CharField(max_length=100)
-    email = models.CharField() # без лимита - на случай очень длинных названий
-    address = models.CharField()
+    email = models.EmailField()
+    address = models.CharField(max=250)
     postal_code = models.CharField(max_length=20)
-    city = models.CharField()
+    city = models.CharField(max_length=250)
     created = models.DateField(auto_now_add=True) # # auto_now_add добавляет дату и время только на момент создания товара
     updated = models.DateField(auto_now=True) # auto_now добавляет дату и время каждый раз, когда товар обновляется
     paid = models.BooleanField(default=False) # булево значение: оплачен заказ или нет
