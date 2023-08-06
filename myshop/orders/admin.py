@@ -14,7 +14,7 @@ class OrderAdmin(admin.ModelAdmin):
                     'last_name',
                     'email',
                     'address',
-                    'postal code',
+                    'postal_code',
                     'city',
                     'paid',
                     'created',
