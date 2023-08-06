@@ -26,7 +26,7 @@ class Order(models.Model):
         """Получение общей стоимости товаров в заказе"""
         return sum(item.get_cost() for item in self.items.all())
 
-class OrderItems(models.Model):
+class OrderItem(models.Model):
     """Сохранение товара, количества и цены, уплаченной за каждый товар"""
     order = models.ForeignKey(Order,
                               related_name='items',
