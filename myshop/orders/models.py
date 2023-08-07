@@ -16,7 +16,7 @@ class Order(models.Model):
     paid = models.BooleanField(default=False) # булево значение: оплачен заказ или нет
 
     class Meta:
-        ordering = ['-created']
+        ordering = ['-created'] # вывод списка в обратном порядке
         indexes = [models.Index(fields=['-created']),]
     
     def __str__(self):
@@ -30,7 +30,7 @@ class OrderItem(models.Model):
     """Сохранение товара, количества и цены, уплаченной за каждый товар"""
     order = models.ForeignKey(Order,
                               related_name='items',
-                              on_delete=models.CASCADE) # каскадное удаление
+                              on_delete=models.CASCADE) # CASCADE автоматически удаляет строку из зависимой таблицы, если удаляется связанная строка из главной таблицы
     product = models.ForeignKey(Product,
                                 related_name='order_items',
                                 on_delete=models.CASCADE)
