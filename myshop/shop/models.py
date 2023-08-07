@@ -23,7 +23,7 @@ class Product(models.Model):
     """Репрезентация товара в интернет-магазине"""
     category = models.ForeignKey(Category,
                                  related_name='products',
-                                 on_delete=models.CASCADE)
+                                 on_delete=models.CASCADE) # CASCADE автоматически удаляет строку из зависимой таблицы, если удаляется связанная строка из главной таблицы
     name = models.CharField(max_length=255)
     slug = models.SlugField(max_length=255)
     image = models.ImageField(upload_to='products/%Y/%m/%d', blank=True)
