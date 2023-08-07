@@ -12,6 +12,7 @@ def order_create(request):
         form = OrderCreateForm(request.POST)
         if form.is_valid:
             order = form.save()
+            # товарные позиции прокручиваются в цикле, для каждой позиции создаётся OrderItem
             for item in cart:
                 OrderItem.objects.create(order=order,
                                          products=item['product'],
