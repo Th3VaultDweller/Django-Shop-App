@@ -11,7 +11,7 @@ class Order(models.Model):
     address = models.CharField(max_length=250)
     postal_code = models.CharField(max_length=20)
     city = models.CharField(max_length=250)
-    created = models.DateField(auto_now_add=True) # # auto_now_add добавляет дату и время только на момент создания товара
+    created = models.DateField(auto_now_add=True) # auto_now_add добавляет дату и время только на момент создания товара
     updated = models.DateField(auto_now=True) # auto_now добавляет дату и время каждый раз, когда товар обновляется
     paid = models.BooleanField(default=False) # булево значение: оплачен заказ или нет
 
