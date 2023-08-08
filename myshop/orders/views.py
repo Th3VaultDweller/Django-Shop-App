@@ -15,7 +15,7 @@ def order_create(request):
             # товарные позиции прокручиваются в цикле, для каждой позиции создаётся OrderItem
             for item in cart:
                 OrderItem.objects.create(order=order,
-                                         products=item['product'],
+                                         product=item['product'],
                                          price=item['price'],
                                          quantity=item['quantity'])
                 
