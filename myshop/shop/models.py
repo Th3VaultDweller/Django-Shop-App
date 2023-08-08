@@ -6,6 +6,7 @@ class Category(models.Model):
     name = models.CharField(max_length=255) # название товара
     slug = models.SlugField(max_length=255, unique=True) # слаг товара для красивого URL-адреса
 
+    # внутренний класс класса модели. Метамодель в основном используется для изменения поведения полей модели, таких как изменение опций заказа, verbose_name, и многих других параметров.
     class Meta:
         ordering = ['name']
         indexes = [models.Index(fields=['name']),]
