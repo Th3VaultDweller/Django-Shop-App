@@ -133,3 +133,6 @@ MEDIA_ROOT = BASE_DIR / 'media' # MEDIA_ROOT – это локальный пу�
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+# электронные письма будут присылаться в консоль
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
