@@ -112,6 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
 
+# языки, на которых будет доступен интернет-магазин
 LANGUAGE = [
     ('en', 'English'),
     ('es', 'Spanish'),
@@ -128,6 +129,10 @@ USE_I18N = True
 
 USE_TZ = True
 
+# каталог(и), где Django будет искать файлы перевода
+LOCALE_PATHS = [
+    BASE_DIR / 'locale',
+]
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
