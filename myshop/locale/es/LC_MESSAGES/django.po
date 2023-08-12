@@ -19,20 +19,20 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 #: .\myshop\settings.py:120
 msgid "English"
-msgstr ""
+msgstr "Inglés"
 
 #: .\myshop\settings.py:121
 msgid "Spanish"
-msgstr ""
+msgstr "Español"
 
 #: .\myshop\settings.py:122
 msgid "Russian"
-msgstr ""
+msgstr "Rusa"
 
 #: .\myshop\settings.py:123
 msgid "French"
-msgstr ""
+msgstr "Francesa"
 
 #: .\myshop\settings.py:124
 msgid "German"
-msgstr ""
+msgstr "Alemán"

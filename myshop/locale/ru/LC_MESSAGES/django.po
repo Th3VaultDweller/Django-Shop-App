@@ -21,20 +21,20 @@ msgstr ""
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 #: .\myshop\settings.py:120
 msgid "English"
-msgstr ""
+msgstr "Английский"
 
 #: .\myshop\settings.py:121
 msgid "Spanish"
-msgstr ""
+msgstr "Испанский"
 
 #: .\myshop\settings.py:122
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
 
 #: .\myshop\settings.py:123
 msgid "French"
-msgstr ""
+msgstr "Французский"
 
 #: .\myshop\settings.py:124
 msgid "German"
-msgstr ""
+msgstr "Немецкий"
