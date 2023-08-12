@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-12 20:27+0300\n"
+"POT-Creation-Date: 2023-08-12 20:58+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,7 +24,7 @@ msgstr ""
 msgid "Quantity"
 msgstr "Количество"
 
-#: .\cart\templates\cart\detail.html:6
+#: .\cart\templates\cart\detail.html:6 .\cart\templates\cart\detail.html:10
 msgid "Your shopping cart"
 msgstr "Ваша корзина"
 
@@ -35,6 +35,14 @@ msgstr "Изображение"
 #: .\cart\templates\cart\detail.html:15
 msgid "Product"
 msgstr "Товар"
+
+#: .\cart\templates\cart\detail.html:17
+msgid "Remove"
+msgstr "Удалить"
+
+#: .\cart\templates\cart\detail.html:18
+msgid "Unit price"
+msgstr "Цена за единицу"
 
 #: .\cart\templates\cart\detail.html:19
 msgid "Price"
@@ -83,3 +91,9 @@ msgstr "Ваша корзина"
 #: .\shop\templates\shop\base.html:24
 msgid "Your cart is empty"
 msgstr "Ваша корзина пуста"
+
+#: .\shop\templates\shop\product\detail.html:23
+#, fuzzy
+#| msgid "Your cart"
+msgid "Add to cart"
+msgstr "Ваша корзина"
