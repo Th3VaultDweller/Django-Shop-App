@@ -20,35 +20,35 @@ msgstr ""
 
 #: .\cart\forms.py:11 .\cart\templates\cart\detail.html:16
 msgid "Quantity"
-msgstr ""
+msgstr "Anzahl"
 
 #: .\cart\templates\cart\detail.html:6
 msgid "Your shopping cart"
-msgstr ""
+msgstr "Ihr warenkorb"
 
 #: .\cart\templates\cart\detail.html:14
 msgid "Image"
-msgstr ""
+msgstr "Darstellung"
 
 #: .\cart\templates\cart\detail.html:15
 msgid "Product"
-msgstr ""
+msgstr "Ware"
 
 #: .\cart\templates\cart\detail.html:19
 msgid "Price"
-msgstr ""
+msgstr "Preis"
 
 #: .\cart\templates\cart\detail.html:62
 msgid "Total"
-msgstr ""
+msgstr "Im ganzen"
 
 #: .\cart\templates\cart\detail.html:72
 msgid "Continue shopping"
-msgstr ""
+msgstr "Weiter einkaufen"
 
 #: .\cart\templates\cart\detail.html:73
 msgid "Checkout"
-msgstr ""
+msgstr "Bestellung aufgeben"
 
 #: .\myshop\settings.py:120
 msgid "English"
@@ -72,12 +72,12 @@ msgstr "Deutsch"
 
 #: .\shop\templates\shop\base.html:7 .\shop\templates\shop\base.html:12
 msgid "My shop"
-msgstr ""
+msgstr "Mein geschäft"
 
 #: .\shop\templates\shop\base.html:18
 msgid "Your cart"
-msgstr ""
+msgstr "Ihr warenkorb"
 
 #: .\shop\templates\shop\base.html:24
 msgid "Your cart is empty"
-msgstr ""
+msgstr "Ihr warenkorb ist leer"
