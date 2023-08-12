@@ -1,16 +1,22 @@
 from django.db import models
 from shop.models import Product
+from django.utils.translation import gettext_lazy as _ # перевод
 
 # Create your models here.
 
 class Order(models.Model):
     """Репрезентация заказа с информацией о клиенте"""
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField()
-    address = models.CharField(max_length=250)
-    postal_code = models.CharField(max_length=20)
-    city = models.CharField(max_length=250)
+    first_name = models.CharField(_('first_name'),
+                                  max_length=100)
+    last_name = models.CharField(_('last_name'),
+                                 max_length=100)
+    email = models.EmailField(_('email'))
+    address = models.CharField(_('address'),
+                               max_length=250)
+    postal_code = models.CharField(_('postal_code'),
+                                   max_length=20)
+    city = models.CharField(_('city'),
+                            max_length=250)
     created = models.DateField(auto_now_add=True) # auto_now_add добавляет дату и время только на момент создания товара
     updated = models.DateField(auto_now=True) # auto_now добавляет дату и время каждый раз, когда товар обновляется
     paid = models.BooleanField(default=False) # булево значение: оплачен заказ или нет
