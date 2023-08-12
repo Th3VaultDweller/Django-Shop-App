@@ -1,21 +1,22 @@
 {% extends "shop/base.html" %}
+{% load i18n %}
 {% load static %}
 
 {% block title %}
-  Your shopping cart
+  {% trans 'Your shopping cart' %}
 {% endblock %}
 
 {% block content %}
-  <h1>Your shopping cart</h1>
+  <h1>{% trans 'Your shopping cart %}</h1>
   <table class="cart">
     <thead>
       <tr>
-        <th>Image</th>
-        <th>Product</th>
-        <th>Quantity</th>
-        <th>Remove</th>
-        <th>Unit price</th>
-        <th>Price</th>
+        <th>{% trans 'Image' %}</th>
+        <th>{% trans 'Product' %}</th>
+        <th>{% trans 'Quantity' %}</th>
+        <th>{& trans 'Remove' %}</th>
+        <th>{& trans 'Unit price' %}</th>
+        <th>{% trans 'Price' %}</th>
       </tr>
     </thead>
     <tbody>
@@ -58,7 +59,7 @@
       
       <!-- Total Price -->
       <tr class="total">
-        <td>Total</td>
+        <td>{% trans 'Total' %}</td>
         <td colspan="4"></td>
         <td class="num">${{ cart.get_total_price }}</td>
       </tr>
@@ -68,7 +69,7 @@
   <!-- Checkout and Continue Shopping -->
   <p class="text-right">
     <a href="{% url 'shop:product_list' %}" class="button
-    light">Continue shopping</a>
-    <a href="{% url 'orders:order_create' %}" class="button">Checkout</a>
+    light">{% trans 'Continue shopping' %}</a>
+    <a href="{% url 'orders:order_create' %}" class="button">{% trans 'Checkout' %}</a>
   </p>
 {% endblock %}
