@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'rosetta',
 
     # Приложения по умолчанию
     'django.contrib.admin',
