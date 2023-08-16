@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-16 13:50+0300\n"
-"PO-Revision-Date: 2023-08-16 13:52+0000\n"
+"PO-Revision-Date: 2023-08-16 14:43+0000\n"
 "Last-Translator:   <aztec242@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -93,7 +93,7 @@ msgstr "Мой магазин"
 
 #: .\shop\templates\shop\base.html:19
 msgid "Language"
-msgstr ""
+msgstr "Язык"
 
 #: .\shop\templates\shop\base.html:39
 msgid "Your cart"
