@@ -9,7 +9,7 @@ msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-08-16 13:50+0300\n"
-"PO-Revision-Date: 2023-08-13 20:45+0000\n"
+"PO-Revision-Date: 2023-08-16 15:06+0000\n"
 "Last-Translator:   <aztec242@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -122,8 +122,8 @@ msgstr "Añadir al carrito"
 
 #: .\shop\templates\shop\product\list.html:11
 msgid "Categories"
-msgstr ""
+msgstr "Categorías"
 
 #: .\shop\templates\shop\product\list.html:14
 msgid "All"
-msgstr ""
+msgstr "Todos"
