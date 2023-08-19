@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
     'rosetta',
+    'parler',
 
     # Приложения по умолчанию
     'django.contrib.admin',
@@ -132,6 +133,21 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 
 USE_TZ = True
+
+# настройки Django-Parler
+PARLER_LANGUAGES = {
+    None: (
+        {'code': 'en'},
+        {'code': 'es'},
+        {'code': 'ru'},
+        {'code': 'fr'},
+        {'code', 'de'}
+    ),
+    'default': {
+        'fallback': 'en',
+        'hide_untranslated': False,
+    }
+}
 
 # каталог(и), где Django будет искать файлы перевода
 # пути locale, которые появляются первыми, имеют наивысший приоритет
