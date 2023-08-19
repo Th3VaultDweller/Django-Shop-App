@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-16 15:17+0300\n"
-"PO-Revision-Date: 2023-08-16 14:44+0000\n"
+"POT-Creation-Date: 2023-08-19 21:08+0300\n"
+"PO-Revision-Date: 2023-08-19 21:10+0000\n"
 "Last-Translator:   <aztec242@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -59,23 +59,23 @@ msgstr "Weiter einkaufen"
 msgid "Checkout"
 msgstr "Bestellung aufgeben"
 
-#: .\myshop\settings.py:121
+#: .\myshop\settings.py:122
 msgid "English"
 msgstr "Englisch"
 
-#: .\myshop\settings.py:122
+#: .\myshop\settings.py:123
 msgid "Spanish"
 msgstr "Spanisch"
 
-#: .\myshop\settings.py:123
+#: .\myshop\settings.py:124
 msgid "Russian"
 msgstr "Russisch"
 
-#: .\myshop\settings.py:124
+#: .\myshop\settings.py:125
 msgid "French"
 msgstr "Französisch"
 
-#: .\myshop\settings.py:125
+#: .\myshop\settings.py:126
 msgid "German"
 msgstr "Deutsch"
 
@@ -122,10 +122,16 @@ msgstr "Ihr warenkorb ist leer"
 msgid "Add to cart"
 msgstr "Ihr warenkorb"
 
-#: .\shop\templates\shop\product\list.html:11
+#: .\shop\templates\shop\product\list.html:9
+#: .\shop\templates\shop\product\list.html:31
+#| msgid "Product"
+msgid "Products"
+msgstr "Waren"
+
+#: .\shop\templates\shop\product\list.html:15
 msgid "Categories"
 msgstr "Kategorien"
 
-#: .\shop\templates\shop\product\list.html:14
+#: .\shop\templates\shop\product\list.html:18
 msgid "All"
 msgstr "Alles"

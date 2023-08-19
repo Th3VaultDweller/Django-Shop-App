@@ -8,17 +8,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-08-16 15:17+0300\n"
-"PO-Revision-Date: 2023-08-16 14:43+0000\n"
+"POT-Creation-Date: 2023-08-19 21:08+0300\n"
+"PO-Revision-Date: 2023-08-19 21:08+0000\n"
 "Last-Translator:   <aztec242@yandex.ru>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
-"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
-"%100>=11 && n%100<=14)? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
 "X-Translated-Using: django-rosetta 0.9.9\n"
 
 #: .\cart\forms.py:11 .\cart\templates\cart\detail.html:16
@@ -61,23 +59,23 @@ msgstr "Продолжить покупки"
 msgid "Checkout"
 msgstr "Оформить заказ"
 
-#: .\myshop\settings.py:121
+#: .\myshop\settings.py:122
 msgid "English"
 msgstr "Английский"
 
-#: .\myshop\settings.py:122
+#: .\myshop\settings.py:123
 msgid "Spanish"
 msgstr "Испанский"
 
-#: .\myshop\settings.py:123
+#: .\myshop\settings.py:124
 msgid "Russian"
 msgstr "Русский"
 
-#: .\myshop\settings.py:124
+#: .\myshop\settings.py:125
 msgid "French"
 msgstr "Французский"
 
-#: .\myshop\settings.py:125
+#: .\myshop\settings.py:126
 msgid "German"
 msgstr "Немецкий"
 
@@ -124,10 +122,16 @@ msgstr "Ваша корзина пуста"
 msgid "Add to cart"
 msgstr "Добавить в корзину"
 
-#: .\shop\templates\shop\product\list.html:11
+#: .\shop\templates\shop\product\list.html:9
+#: .\shop\templates\shop\product\list.html:31
+#| msgid "Product"
+msgid "Products"
+msgstr "Товары"
+
+#: .\shop\templates\shop\product\list.html:15
 msgid "Categories"
 msgstr "Категории"
 
-#: .\shop\templates\shop\product\list.html:14
+#: .\shop\templates\shop\product\list.html:18
 msgid "All"
 msgstr "Все"
