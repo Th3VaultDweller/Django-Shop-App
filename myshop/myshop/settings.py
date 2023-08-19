@@ -141,7 +141,7 @@ PARLER_LANGUAGES = {
         {'code': 'es'},
         {'code': 'ru'},
         {'code': 'fr'},
-        {'code', 'de'}
+        {'code': 'de'}
     ),
     'default': {
         'fallback': 'en',
