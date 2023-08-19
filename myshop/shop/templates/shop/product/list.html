@@ -3,7 +3,11 @@
 {% load static %}
 
 {% block title %}
-  {% if category %}{{ category.name }}{% else %}Products{% endif %}
+  {% if category %}
+    {{ category.name }}
+  {% else %}
+    {% trans 'Products' %}
+  {% endif %}
 {% endblock %}
 
 {% block content %}
@@ -24,7 +28,7 @@
     <h1>{% if category %}
           {{ category.name }}
         {% else %}
-          Products
+          {% trans 'Products' %}
         {% endif %}</h1>
     {% for product in products %}
       <div class="item">
