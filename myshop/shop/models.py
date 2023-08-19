@@ -42,10 +42,10 @@ class Product(TranslatableModel):
     updated = models.DateTimeField(auto_now=True) # auto_now добавляет дату и время каждый раз, когда товар обновляется
 
     class Meta:
-        ordering = ['name']
+        # ordering = ['name']
         indexes = [
-            models.Index(fields=['id', 'slug']),
-            models.Index(fields=['name']),
+            # models.Index(fields=['id', 'slug']),
+            # models.Index(fields=['name']),
             models.Index(fields=['-created']),
         ]
     
