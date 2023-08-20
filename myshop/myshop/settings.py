@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'orders.apps.OrdersConfig',
     'rosetta',
     'parler',
+    'localflavor',
 
     # Приложения по умолчанию
     'django.contrib.admin',
